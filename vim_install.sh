@@ -4,8 +4,8 @@ sleep 10
 yum install gcc gcc-c++ -y
 yum install wget curl cmake git python-devel -y
 yum install vim -y
-vimrc="/root/vimtest"
-vimdir="/root/vimtestd"
+vimrc="/root/.vimrc"
+vimdir="/root/.vim"
 if [ -f "$vimrc" ];then
 mv $vimrc ${vimrc}.bak 
 fi
