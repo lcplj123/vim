@@ -40,8 +40,8 @@ ${mysqlpath}/scripts/mysql_install_db --datadir=${datapath} --basedir=${mysqlpat
 chown -R mysql:mysql ${mysqlpath}
 chown -R mysql:mysql ${datapath}
 \cp -f ${mysqlpath}/support-files/mysql.server /etc/init.d/mysqld
-sed -i 's#^basedir=$#basedir=${mysqlpath}#' /etc/init.d/mysqld
-sed -i 's#^datadir=$#datadir=${datapath}#' /etc/init.d/mysqld
+sed -i 's#^basedir=$#basedir='"${mysqlpath}"'#' /etc/init.d/mysqld
+sed -i 's#^datadir=$#datadir='"${datapath}"'#' /etc/init.d/mysqld
 cat > /etc/my.cnf <<END
 [client]
 port            = 3306
