@@ -1,6 +1,6 @@
 #!/bin/bash
 echo 'Start Installing Vim, it will takes about 5 hours! Please wait...'
-sleep 10
+sleep 3
 yum install gcc gcc-c++ -y
 yum install wget curl cmake git python-devel -y
 yum install vim -y
