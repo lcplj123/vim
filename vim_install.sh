@@ -58,8 +58,8 @@ imap {} {}<Left>
 imap "" ""<Left>
 imap '' ''<Left>
 "NERD tree
-map <C-n> :NERDTreeToggle<CR>
-imap <C-n> <ESC> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR>
+imap <F2> <ESC> :NERDTreeToggle<CR>
 "YouCompleteMe
 let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 let g:ycm_collect_identifiers_from_tags_files=1
