@@ -61,7 +61,7 @@ imap '' ''<Left>
 map <C-n> :NERDTreeToggle<CR>
 imap <C-n> <ESC> :NERDTreeToggle<CR>
 "YouCompleteMe
-let g:ycm_global_ycm_extra_conf="/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_seed_identifiers_with_syntax=1
 let g:ycm_confirm_extra_conf=0
@@ -72,9 +72,9 @@ vim +PluginInstall +qall
 cd ${vimdir}/bundle/YouCompleteMe
 ./install.sh --clang-completer
 echo "Over"
-echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file. "
-echo "path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/..ycm_extra_conf.py"
-echo "comment the following scentence"
+echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file."
+echo "file path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+echo "comment the following scentences,add # before each line."
 echo "try:"
 echo "	final_flags.remove( '-stdlib=libc++' )"
 echo "except ValueError:"
