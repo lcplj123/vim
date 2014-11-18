@@ -60,10 +60,11 @@ imap '' ''<Left>
 "NERD tree
 map <C-n> :NERDTreeToggle<CR>
 imap <C-n> <ESC> :NERDTreeToggle<CR>
+"YouCompleteMe
 let g:ycm_global_ycm_extra_conf=".vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
 let g:ycm_collect_identifiers_from_tags_files=1
 let g:ycm_seed_identifiers_with_syntax=1
-let g:ycm_confirm_extra_conf=0 
+let g:ycm_confirm_extra_conf=0
 EOF
 git clone https://github.com/gmarik/Vundle.vim.git $vimdir/bundle/Vundle.vim
 vim +PluginInstall +qall
