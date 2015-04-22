@@ -2,8 +2,16 @@
 echo 'Start Installing Vim, it will takes about 2 hours! Please wait...'
 sleep 3
 yum install gcc gcc-c++ -y
-yum install wget curl cmake git python-devel -y
+yum install wget curl git python-devel -y
 yum install vim -y
+wget http://www.cmake.org/files/v3.2/cmake-3.2.2.tar.gz
+tar zxvf cmake-3.2.2.tar.gz
+cd cmake-3.2.2
+./bootstrap
+gmake && gmake install
+cd ..
+rm -rf cmake-3.2.2
+rm -rf cmake-3.2.2.tar.gz
 vimrc="/root/.vimrc"
 vimdir="/root/.vim"
 if [ -f "$vimrc" ];then
@@ -74,11 +82,11 @@ vim +PluginInstall +qall
 cd ${vimdir}/bundle/YouCompleteMe
 ./install.sh --clang-completer
 echo "Over"
-echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file."
-echo "file path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-echo "comment the following scentences,add # before each line."
-echo "try:"
-echo "	final_flags.remove( '-stdlib=libc++' )"
-echo "except ValueError:"
-echo "  pass"
+#echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file."
+#echo "file path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+#echo "comment the following scentences,add # before each line."
+#echo "try:"
+#echo "	final_flags.remove( '-stdlib=libc++' )"
+#echo "except ValueError:"
+#echo "  pass"
 
