@@ -82,11 +82,11 @@ vim +PluginInstall +qall
 cd ${vimdir}/bundle/YouCompleteMe
 ./install.sh --clang-completer
 echo "Over"
-#echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file."
-#echo "file path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-#echo "comment the following scentences,add # before each line."
-#echo "try:"
-#echo "	final_flags.remove( '-stdlib=libc++' )"
-#echo "except ValueError:"
-#echo "  pass"
+echo "Tips: if you want to use the c++ sdt lib,you must modify the .ycm_confirm_extra_conf file."
+echo "file path:/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+echo "comment the following scentences,add # before each line."
+echo "try:"
+echo "	final_flags.remove( '-stdlib=libc++' )"
+echo "except ValueError:"
+echo "  pass"
 
